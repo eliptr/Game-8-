@@ -5,8 +5,10 @@
  <preference name="DisallowOverscroll" value="true" />
  <preference name="StatusBarOverlaysWebView" value="true" />
  <preference name="KeepRunning" value="true" />
+ <preference name="KeepRunning" value="true"/>
  <name>Game 8</name>
  <icon src="" />
 
 
 </widget>
+
