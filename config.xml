@@ -6,9 +6,9 @@
  <preference name="StatusBarOverlaysWebView" value="true" />
  <preference name="KeepRunning" value="true" />
  <preference name="KeepRunning" value="true"/>
+ <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
  <name>Game 8</name>
  <icon src="" />
 
 
 </widget>
-
