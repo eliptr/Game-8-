@@ -6,6 +6,7 @@
  <preference name="StatusBarOverlaysWebView" value="true" />
  <preference name="KeepRunning" value="true" />
  <preference name="KeepRunning" value="true"/>
+ <plugin name="cordova-plugin-background-app" spec="^2.0.0" />
  <name>Game 8</name>
  <icon src="" />
 
