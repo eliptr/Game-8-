@@ -13,6 +13,12 @@ function setIntervalAndExecute(fn, t) {
     return(setInterval(fn, t));
 }
 
+var date = new Date().toLocaleString();
+
+window.onbeforeunload = function(){
+  localStorage.setItem('date2', Date());
+};
+
 //load images
 var piece = new Image();
 var floor = new Image();
@@ -33,8 +39,15 @@ var foodw = 121 + "px";
 var foo = true;
 var item1 = false;
 var height = 119.4;
-var down = 0.07;
+var down = 0.00016;
 var hei2 = hei - hei;
+var date = new Date();
+
+var d1 = new Date(); //"now"
+var d2 = Date.parse(localStorage.date2);
+var diff = Math.abs(d1-d2);  // difference in milliseconds
+var finaldif = Math.floor(diff / 1000);
+
 
 // on load
 function draw() {
@@ -44,7 +57,6 @@ function draw() {
   ctx.canvas.height = hei;
 
   localStorage.setItem('items', JSON.stringify(height));
-
 
   var pX = wid / 2 - 59;
   var pY = hei / 2;
@@ -68,7 +80,6 @@ function draw() {
   huncon.style.bottom = hei2 + 20 + "px";
 
   var hunbar = document.getElementById('hunbar');
-  document.getElementById('hunbar').style.height = height + "px";
   document.getElementById('hunbar').style.top = 119.4 + "px";
 
   ctx.drawImage(pad, paX, paY);
@@ -77,18 +88,32 @@ function draw() {
 
   requestAnimationFrame(draw, 10);
   requestAnimationFrame(foodpi, 10);
-  setIntervalAndExecute(hungerGoingDown, 100000000000);
+//  setIntervalAndExecute(hungerGoingDown, 1000);
   setInterval(hungerStopping, 10);
+  requestAnimationFrame(hungerGoingDown, 100);
 }
+
+function counter() {
+    var i = 0;
+    // This block will be executed 100 times.
+    setInterval(function(){
+        if (i == 100) clearInterval(this);
+        else console.log( 'Currently at ' + (height.toFixed(3)));
+    }, 1000);
+} // End
+
+
+counter()
 
 function test() {
   if (localStorage.getItem('items')) {
-    height = JSON.parse(localStorage.getItem('items'));
+    height = JSON.parse(localStorage.getItem('items')) - (finaldif * 0.095);
     console.log("effeF");
   } else {
     height = 119.4;
     console.log("efeafq");
   }
+  console.log(finaldif);
 }
 
 test()
@@ -133,5 +158,5 @@ function foodpi() {
 function applef() {
   console.log("apple clicked");
   height = height + 20;
-  down = 0.07;
+  down = 0.00016;
 }
