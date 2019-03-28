@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+canvas {
+  background-color: #F2EDEF;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-bottom: 0px;
+  overflow: 0px;
+}
+
+.food {
+ width: 121px;
+ height: 76px;
+ position: fixed;
+ outline: none;
+ box-shadow: none;
+/* background-image: url("images/foodf.png"); */
+ background-color: rgba(255, 0, 0, 0);
+ border: 0px;
+ padding: 0px;
+ margin: 0px;
+}
+
+.apple {
+/*  background-image: url("images/hotdog2.png");*/
+  width: 143px;
+  height: 82px;
+  background-color: rgba(255, 0, 0, 0);
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  outline: none;
+  box-shadow: none;
+}
+
+
+.huncon {
+  top: 20px;
+  width: 9.2px;
+  height: 119.4px;
+  position: fixed;
+  border: 1px solid;
+  border-color: #048998;
+  background-color: rgba(255, 0, 0, 0);
+  transform: rotate(180deg);
+}
+
+.hunbar {
+  background-color: #048998;
+  width: 9.2px;
+}
+
+html, body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0px;
+}
