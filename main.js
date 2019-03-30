@@ -91,6 +91,9 @@ function draw() {
   canvasMain.style.width = windowWidth + 'px';   /// CSS size of canvas
   canvasMain.style.height = windowHeight + 'px';
 
+  fX = - 10;
+  fY = canvasMain.height - 393;
+
 
   localStorage.setItem('items', JSON.stringify(height));
 
