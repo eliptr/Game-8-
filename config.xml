@@ -4,8 +4,7 @@
  <preference name="Fullscreen" value="true" />
  <preference name="DisallowOverscroll" value="true" />
  <preference name="StatusBarOverlaysWebView" value="true" />
- <preference name="KeepRunning" value="true" />
- <preference name="KeepRunning" value="true"/>
+ <preference name="orientation" value="portrait" />
  <name>Game 8</name>
  <icon src="" />
 
