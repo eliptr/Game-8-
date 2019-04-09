@@ -15,9 +15,9 @@ function setIntervalAndExecute(fn, t) {
 
 var date = new Date().toLocaleString();
 
-window.onbeforeunload = function(){
+document.addEventListener("pause", function () {
   localStorage.setItem('date2', Date());
-};
+}, false);
 
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
